@@ -14,11 +14,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-/**
- * @purpose DBManager is responsible for exchanging information with DB
- * @author Darren
- *
- */
+
 public class DBManager {
 	User user = new User();
     Connection conn = null;            
@@ -39,7 +35,7 @@ public class DBManager {
             ResultSet rs = stmt.executeQuery(sql);
  
             buildJo(rs);
-//            System.out.println(jo.toString());
+		System.out.println(jo.toString());
             rs.close();                                                               
             stmt.close();                                                             
             stmt = null;                                                              
@@ -82,7 +78,7 @@ public class DBManager {
             ResultSet rs = pstmt.executeQuery();
  
             buildJo(rs);
-//            System.out.println(jo.toString());
+           System.out.println(jo.toString());
             rs.close();                                                               
             pstmt.close();                                                             
             pstmt = null;                                                              
